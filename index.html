@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+	<meta charset="utf-8">
+ </head>
+<body>
+
+	<span id="one"></span>
+	<br>
+    <form >
+	<span id="two"></span>
+    </form>
+	<script>
+	 var 
+	    i = 0, 
+	    j = 0,
+		t = "Заглавная буква пробегает в предложении.",
+        h = "Используя тег <span>, организуйте бегущую строку в произвольном месте страницы.",
+		a = setInterval(function () {(t.length > i) ? document.getElementById('one').innerHTML += h[i++] : ClearTimeout(a)}, 200),
+		b = setInterval(function () {(t.length > j++) ? document.getElementById('two').innerHTML = t.replace(t.substr(0, j) + t[j], t.substr(0, j) + t[j].toUpperCase()) : ClearTimeout(t)}, 200);
+    </script>
+</html>
